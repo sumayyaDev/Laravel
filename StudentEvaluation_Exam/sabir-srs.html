@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SRS</title>
+        <style>
+            .image{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 500px;
+                border: 2px solid rgb(90, 84, 84);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>3. External Interface Requirements</h2>
+        <h3>3.1 User Interfaces</h3>
+        <p>The opening page will have two buttons for two portals. One for the faculty members and the other for the students.</p>
+            <img src="Home.PNG" alt="" class="image">
+            <p>The faculty portal will use image verification, username, and password for logging in. Same applies for the students.</p>
+            <img src="Login.PNG" alt="" class="image">
+        <p>The faculty will be able to click on student-cohorts("Sections"), and will be allowed to click on individual students
+    to provide them "Reading Assignments", set the time and set "Quizzes" and time for them as well.</p>
+            <img src="Faculty portal.PNG" alt="" class="image"><br>
+            <img src="Upload RA.PNG" alt="" class="image"> 
+            <p>They will receive detailed
+reports of their performances upon completion of the assignments on the "Reports" section.</p>
+            <img src="Reports.PNG" alt="" class="image"> 
+            <p>This includes their aggregate results
+that is their average in a histogramic form based on their performance on "Quizzes".</p>
+            <img src="Reports-data.PNG" alt="" class="image"> 
+            <p>More on that later. The faculty will be able to give 
+"Reading Assignments" to all students instead of individually if they so choose.</p>
+            <img src="Sections.PNG" alt="" class="image"> 
+            <p>The student portal will contain "Reading Assignments"
+ for them and upon clicking they will be shown the assignments and time for them. </p>
+            <img src="Student-portal.PNG" alt="" class="image">    
+            <p>And they'll be able to take quizzes at their
+leisure and will be shown the time during each "Quiz."</p>
+
+            <h3>3.2 Hardware Interfaces</h3>
+            <p>The minimum requirements that have been discerned is that the product should work on the web via sign in through
+                google, as well as be incorporated as a fully functioning mobile app to be used via android, iphone, watch etc.
+            </p>
+
+            <h3>3.3 Software Interfaces</h3>
+            <p>The product shall be built using traditional web development tools, such as html, JavaScript, CSS and for database
+                php as well as their frameworks and libraries such as laravel, bootstrap, react.js and others. Language for database
+                manipulation such as MySQL will be used as information about faculty and students will need to be stored. Data from 
+                the database will be used to provide reports using internal algorithms for calcualations.
+            </p>
+
+            <h3>3.4 Communications Interfaces</h3>
+            <p>The product will require internet connection to work properly. Users will need to sign in using their respective google
+                accounts and will have the option to log out of the system. Faculty members will be able to register themselves
+                    as well as their students into the database at their convenience.
+            </p>
+
+            <h2>4. System Features</h2>
+            <p>This section describes our product's most prominent features and characterizes their importance in the total 
+                completion of the product
+            </p>
+
+            <h3>4.1 Facial recognition system</h3>
+            <p>4.1.1 Description and Priority</p>
+            <p>The system should allow for facial recognition of the users in order for them to log in to the system and 
+                must be utilized for the "Reading Assignments" and "Quizzes." It must also be able to check whether or not the
+                students is looking forward at the screen as well, if possible. High priority with a rating of 8 from 1 to 9.
+            </p>
+            <p>4.1.2 Stimulus/Response Sequences</p>
+            <p>During logging in, registration(for comparison during future log ins), reading assignments, quizzes, this 
+                feature will be utilized. It will receive input from the camera for its proper functioning. It will also check
+                if someone's looking at the screen or not. Vital for the desired "Attention Score."
+            </p>
+
+            <p>4.1.3 Functional Requirements</p>
+            <p>The software responsible for this feature is TBD. The program will not allow the user to log in or will kick
+                them out in the case of an error. The functionality of this feature is of utmost importance.
+            </p>
+
+            <h3>4.2 PDF divider</h3>
+            <p>4.2.1 Description and Priority</p>
+            <p>One of the requirements identified is that the product must have a feature which will take an uploaded
+                pdf file and split it into subpages for the "Reading Assignments" section and must not allow the assignment to 
+                be downloaded in any way shape or form. Medium priority with a rating of 5.
+            </p>
+            <p>4.2.2 Stimulus/Response Sequences</p>
+            <p>This software will be used when the faculty uploads their materials in pdf form for the assignments that will
+                be assigned for the respective students.
+            </p>
+            <p>4.2.3 Functional Requirements</p>
+            <p>The software for the feature is TBD. In the case of errors the feature ought not to allow for the pdfs to 
+                be uploaded.
+            </p>
+
+            <h3>4.3 Text Comparison System</h3>
+            <p>4.3.1 Description and priority</p>
+            <p>The product must have a text comparison system which will allow for the internal algorithm itself to score
+                quizzes(Whether or not the answers are right), but also allow for the program to identify the specific subpages
+                from which the questions were made. The data will be used for the convenience of the faculty in the "Reports"
+                section of their respective portals. AI may be used in the case of general questions instead of just ony MCQs.
+                 High priority with a rating of 8.
+            </p>
+            <p>4.3.2 Stimulus/Response Sequences</p>
+            <p>After the student has finished their quizzes the algorithm will check their answers against the reading material.
+                Will identify the parts of the subpages for the relevant questions. The data will provide feedback for the faculty.
+            </p>
+            <p>4.3.3 Functional Requirements</p>
+            <p>The text recognition software is yet to be decided (TBD). The feature must avoid errors as much as possible for a thorough
+                evaluation of the quizzes.
+            </p>
+
+            <h3>4.4 General Features</h3>
+            <p>4.4.1 Description and Priority</p>
+            <p>The product must have a google log in, log out system, must support database integration for the "Student-cohorts"
+                , Must allow internal calculations for the aggregate "Attention-scores", "Quiz" performances, in the form of
+                histograms if possible. Highest priority of 9.
+            </p>
+            <p>4.4.2 Stimulus/Response Sequences</p>
+            <p>Log in records, general data, student-cohort details, report details(Assignments & Quizzes), pdf file upload system
+                etc. general features must be added for the product to work as a properly functional website and as a mobile app.
+            </p>
+            <p>4.4.3 Functional Requirements</p>
+            <p>These features can be implemented using html, CSS, Javascript, php, MySQL as well as their frameworks and libraries like
+                laravel, react.js etc. 
+            </p>
+
+            <h3>4.5 Voice Input System</h3>
+            <p>4.5.1 Description and Priority</p>
+            <p>A voice input system is to be used for the students to answer their quizzes using just their voices.
+                Low priority with a rating of 2.
+            </p>
+            <p>4.5.2 Stimulus/Response Sequences</p>
+            <p>It is to be used only if the faculty specifies that the answers will be taken through voice.</p>
+            <p>4.5.3 Functional Requirements</p>
+            <p>The voice input software for this feature is TBD.</p>
+
+            <h3>4.6 Timer</h3>
+            <p>4.6.1 Descripiton and Priority</p>
+            <p>Timer to be used to calculate the student's attention span for the desired "Attention-score" as well as for the 
+                implementation of quizzes under deadlines. High priority with a score of 7.
+            </p>
+            <p>4.6.2 Stimulus/Response Sequences</p>
+            <p>It is to be used during the reading assignments and in the case of quizzes. After the timer runs out students
+                will no longer have access to the quiz and assignments.
+            </p>
+            <p>4.6.3 Functional Requirements</p>
+            <p>The software or the implementation method of the timer is TBD.</p>
+
+            <h2>5. Other Nonfunctional Requirements</h2>
+            <h3>5.1 Performance Requirements</h3>
+            <p>As the product is to be used as a mobile app. It must meet the minimum requirements of android, iphone etc. systems.
+
+            </p>
+
+            <h3>5.2 Health & Safety Requirements</h3>
+            <p>The product bears little to no threat to health and safety.</p>
+
+            <h3>5.3 Security Requirements</h3>
+            <p>The product will use a google account log in and have its own password. This may be the only safety issue for the 
+                system to take care of.
+            </p>
+
+            <h3>5.4 Software Quality Attributes</h3>
+            <p>The product may be improved further for future cases as newer needs arise. A system where the student can view
+                their performance may be implemented. A chat system for the better communication between faculty and students may be
+                implemented. As such the system ought to remain flexible for future implementation of additional features.
+            </p>
+
+            <h3>5.5 Business Rules</h3>
+            <p>As per the understanding achieved, the system can only allow authorized faculty members of educational institutes
+                to register themselves and they themselves shall register students into the system. Students themselves cannot
+                register into the system.
+            </p>
+
+            <h2>6. Other Requirements</h2>
+            <p>N/A</p>
+
+            <h2>Appendix A: Glossary</h2>
+            <p>References: <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">https://en.wikipedia.org/wiki/Main_Page</a></p>
+            <ul>
+                <li>Facial Recognition System: A facial recognition system is a technology capable of matching a human face 
+                    from a digital image or a video frame against a database of faces.</li>
+                <li>Voice Input System: Voice input computer systems (or speech recognition systems) learn how a particular user pronounces 
+                    words and uses information about these speech patterns to guess what words are being spoken.</li>
+                <li>Text Comparison System:Text Comparison is the process of inspecting two files to 
+                    ensure that no unintended changes have occurred.</li>
+                <li>AI/Artificial Intelligence: Artificial intelligence (AI) is intelligence demonstrated by machines, 
+                    as opposed to the natural intelligence displayed by animals and humans.</li>
+            </ul>
+
+            <h2>Appendix B: Analysis Models</h2>
+            <p>N/A</p>
+
+            <h2>Appendix C: To Be Determined List</h2>
+            <ol>
+                <li>Facial Recognition</li>
+                <li>Text Comparison</li>
+                <li>Voice Input System</li>
+                <li>PDF Divider</li>
+                <li>Timer</li>
+            </ol>
+
+        
+    </body>
+</html>

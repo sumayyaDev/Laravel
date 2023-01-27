@@ -1,0 +1,611 @@
+<html>
+<head>
+     <title>Software Requirements Specification</title>
+	 <link rel="stylesheet" type="text/css" href="style.css">
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	    <!-- jQuery library -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	   <!-- Latest compiled JavaScript -->
+	   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	 
+</head>
+
+<body>
+    <header class="header">
+	   <nav class="navbar navbar-style">
+	       <div class="container">
+		      <div class="navbar-header">
+			    
+				<!--creating a toogle-bar for menu icon-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+		        
+		      </div>
+			  <!--making menu icon responsive-->
+			  <div class="collapse navbar-collapse" id="micon">
+			  
+			  <!--creating menu-->
+			    <ul class="nav navbar-nav navbar-left"> <!--alligning the menu-->
+				 <li><a href="#home">Home</a></li>
+				 <li><a href="#table">Table of Contents</a></li>
+				 <li><a href="#intro">Introduction</a></li>
+				 <li><a href="#descrip">Overall Description</a></li>
+				 <li><a href="">External Interface Requirements</a></li>
+				 <li><a href="#features">System Features</a></li>
+				 <li><a href="#function">Other Nonfunctional Requirements</a></li>
+				 <li><a href="">Other Requirements</a></li>
+				 <li><a href="#appendix">Appendix</a></li>
+				</ul>
+			  </div>	
+		   
+		   </div>	   
+	   </nav>
+	   
+     <section id="home">
+     <div class="container">
+     <div class="row">
+	 <div class="col-md-10">
+	   
+	   <h1>Software Requirements Specification</h1>
+	   <h1>for</h1>
+	   <h1>Online Student Evaluation System</h1>
+	   <h1>Version 1.0 approved</h1>
+	   <h1>Prepared by</h1>
+	   <p>Sumayya Akter: 2013467642</p>
+	   <p>Sabir Md. Sanaullah: 2012499642</p>
+       <p>MD Afjal Hossain Dali: 2013652042</p>
+       <p>Akil Hossain Prottoy: 1931795642</p>
+	   <h1>North South University</h1>
+       <h1>27/10/2022</h1>	   
+	   
+	</header>
+	</div>
+	</div>
+	</div>
+	</section>
+	
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  
+	 <section id="table">
+     <div class="container">
+     <div class="row">
+	 <div class="col-md-10">
+	
+	<p>
+	Table of Contents<br>
+Table of Contents ................................................................................................2<br>
+Revision History..................................................................................................2<br>
+1. Introduction....................................................................................................3<br>
+1.1 Purpose .......................................................................................................3<br>
+1.2 Document Conventions ..........................................................................................3<br>
+1.3 Intended Audience and Reading Suggestions .....................................................................3<br>
+1.4 Product Scope .................................................................................................3<br>
+1.5 References ....................................................................................................3<br>
+2. Overall Description ............................................................................................3<br>
+2.1 Product Perspective ...........................................................................................3<br>
+2.2 Product Functions .............................................................................................3<br>
+2.3 User Classes and Characteristics ..............................................................................3<br>
+2.4 Operating Environment .........................................................................................3<br>
+2.5 Design and Implementation Constraints..........................................................................3<br>
+2.6 User Documentation ............................................................................................3<br>
+2.7 Assumptions and Dependencies ..................................................................................<br>
+3. External Interface Requirements ................................................................................<br>
+3.1 User Interfaces ...............................................................................................<br>
+3.2 Hardware Interfaces............................................................................................<br>
+3.3 Software Interfaces ...........................................................................................<br>
+3.4 Communications Interfaces .....................................................................................<br>
+4. System Features ................................................................................................4<br>
+4.1 System Feature 1 ..............................................................................................4<br>
+4.2 System Feature 2 (and so on) ..................................................................................4<br>
+5. Other Nonfunctional Requirements ...............................................................................4<br>
+5.1 Performance Requirements.......................................................................................4<br>
+5.2 Safety Requirements............................................................................................5<br>
+5.3 Security Requirements..........................................................................................5<br>
+5.4 Software Quality Attributes....................................................................................5<br>
+5.5 Business Rules ................................................................................................5<br>
+6. Other Requirements .............................................................................................5<br>
+Appendix A: Glossary ..............................................................................................5
+	</p>
+	</div>
+	</div>
+	</div>
+	</section>
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+	<!----------------Introduction-------------->
+	<section id="intro">
+     <div class="container">
+     <div class="row">
+	 <div class="col-md-10">
+	
+	<h3><strong>1. Introduction <br> 1.1 Purpose</strong></h3>
+	<p>The primary purpose to develop this system to optimize and evaluate students by taking online exams and detecting 
+	their mistakes. Teachers can create a quiz platform for a particular student cohort where the students can participate 
+	in online examination in the form of MCQ, text answers and voice answer. The system will automatically evaluate 
+	all the answers and generate marks. Then the system will also show the percentage of wrong answered 
+	questions and from which part of the reading materials those answered belongs.</p>
+	
+	<h3><strong>1.2 Document Convention</strong></h3>
+	<p>The font used in this document is Arial. The text is made bolt for the highlighting purpose 
+	so that it can be easily differentiated. In this document, every functionality is important and every requirement
+	has its own priority.</p>
+	
+	<h3><strong>1.3 Intended Audience and Reading Suggestions</strong></h3>
+	<p>The document is meant for the developers, testers, designers and users or anyone willing to work for the system.
+	This document will serve as a reference document for every team who are taking part in making the project. 
+	They will coordinate every activity that take place in the software engineering process 
+	and will be guided by Dr. Nabeel Mohammed.</p>
+	
+	<h3><strong>1.4 Product Scope</strong></h3>
+	<p>This Online Student Evaluation System enables users to have an exam taking facilities. 
+	It solves the typical issues of manually conducting examinations where both teachers and students have to attend. 
+	This system also showed that how much time students have spent behind the reading materials to get it. 
+	This kind of system is specially designed for educational institution to help in taking examination smoothly 
+	and judge the students level of studying properly.</p>
+	
+	<h3><strong>1.5 References</strong></h3>
+	<p>Laravel<br>Bootstrap<br>Google API</p>
+	</section>
+	
+	
+	<!-------------Overall Description------------>
+	<section id="descrip">
+	<div class="container">
+    <div class="row">
+	<div class="col-md-10">
+	<h3><strong>2. Overall Description <br> 2.1Product Perspective</strong></h3>
+	<p>Online Student Evaluation System is created to analyze the students over the perspective that 
+	how much time they have spent behind reading the study materials and how much they were able to understand it. 
+	Teachers can log into their accounts and create an exam portal for a student cohort where students can take part 
+	in exams after finishing their reading materials. The system is self-contained.</p>
+	
+	<h3><strong>2.2 Product Functions</strong></h3>
+	<p>The system’s functions are super user-friendly so that it is easy for the users to operate. 
+	 The more functions of the software are provided below:</p>
+	 <ul>
+	 <li>All students can create an account and log in using google account.</li>
+     <li>Teacher who have created an exam portal will have editing abilities.</li>
+     <li>Students can sit for the exam and have to finish it within the time that has been assigned for the exam.</li>
+     <li>Teachers can see the marks, right answers and the histogram of the result over a student cohort.</li>
+	 </ul>
+	
+	
+	<h3><strong>2.3 User Classes and Characteristics</strong></h3>
+	<p>All students who are part of a particular cohort can log in after verifying their identity in video also. 
+	There are two different type of actors, they are teachers and students. 
+	Teachers can see the answers of questions, quiz marks, the improvement rates through histogram, upload reading materials. 
+	Students can see the reading materials but cannot download it and after finishing reading they will give exam 
+	that based on those reading materials.</p>
+
+    <h3><strong>2.4 Operating Environment</strong></h3>
+	<p>Platform supported: Web and Android<br>
+      Web server: Any operating system with Laravel 4.2.17<br>
+      Android App: Any system with a functional web browser<br>
+      Database configuration: SQLite
+     </p>
+	
+	<h3><strong>2.5 Design and Implementation Constraints</strong></h3>
+	<p>We will have a web app, android app, face recognition app, voice message taking app for the system. 
+	Users will need to use these apps to get services from the system.</p>
+	
+	<h3><strong>2.6 User Documentation</strong></h3>
+	<p>The product will come with a user manual which will explain how to use the system such as how to create a 
+	student-cohort, how to take exams, how to give answers of exam questions, 
+	how to sit in front of camera while video needs to be on.</p>
+	
+	<h3><strong>2.7 Assumption and Dependencies</strong></h3>
+	<p>Users must have an active internet connection. Web users must have a working browser to use the system.</p>
+	
+	</div>
+	</div>
+	</div>
+	</section>
+	
+	
+<!----------------------System Features------------>
+	<section id="features">
+	<div class="container">
+    <div class="row">
+	<div class="col-md-10">
+	
+<!-------------Log in Using Google----------------->
+	<h3><strong>4.System Features <br> 4.1 Log in Using Google</strong></h3>
+	<ul>
+	<li>Use Case: Login using Google</li>
+	<li>Actor(s): Teachers, Students</li>
+	<li>Brief Description: The students and teachers can login to this system using their Google account and do the works 
+	    those are assigned for them particularly.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>Users will choose the option between teacher and student.</td>
+		  <td>System redirect to the page of teacher or student.</td>
+	   </tr>
+	   <tr>
+	      <td>User click the log in page if account already exist.</td>
+		  <td>Systems redirects to the google login page.</td>
+	   </tr>
+	   <tr>
+	      <td>User put the sufficient data using google account.</td>
+		  <td>System will be responsive by verifying the credentials data through google API.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-1: If the user enters incorrect google credentials, the system will redirect to login page.</p>
+	 
+<!--------------------Student-cohort----------------> 
+	<h3><strong>4.2 Create student-cohort</strong></h3>
+	<ul>
+	<li>Use Case: Create student-cohort</li>
+	<li>Actor(s): Teacher</li>
+	<li>Brief Description: After login into the system, the teacher can create student-cohort by clicking the
+	“create-student-cohort” button.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>Teachers clicks on “create-student-cohort” button.</td>
+		  <td>The system provides a form for creating student-cohort</td>
+	   </tr>
+	   <tr>
+	      <td>Teachers fills up the necessary information and clicks submit button.</td>
+		  <td>The system will show a successful message and the cohort will be added to the dashboard.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-2: The system will show an error message if the form is not filled properly or if any 
+	 information is missing it shows the message “the filled is required”.</p>
+	 
+<!------------Add Students to student-cohort--------------->
+	 <h3><strong>4.3 Add Students to student-cohort</strong></h3>
+	<ul>
+	<li>Use Case: Add students to a cohort</li>
+	<li>Actor(s): Teacher</li>
+	<li>Brief Description: The teacher can add students to the exam cohort so that they can have access to 
+	   reading materials and give exams.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>Techer clicks on “add-student” button.</td>
+		  <td>System redirects to add student page</td>
+	   </tr>
+	   <tr>
+	      <td>The teacher will enter the students email address and then click on “submit” button.</td>
+		  <td>The system will add the student to that cohort.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-3: There can be an error because the entered email might be invalid.</p>
+	 
+<!-------------Uploading Reading Materials---------------->
+	 <h3><strong>4.4 Upload Reading materials</strong></h3>
+	<ul>
+	<li>Use Case: Upload reading materials as pdf</li>
+	<li>Actor(s): Teacher</li>
+	<li>Brief Description: The teacher will upload reading materials for students and later take exam over these.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>Teacher will click on a button “upload-materials-pdf”</td>
+		  <td>The system will allow teacher to upload only pdf materials.</td>
+	   </tr>
+	   <tr>
+	      <td>Teacher will confirm the action</td>
+		  <td>System will show a successful message</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-4: The button “upload-materials-pdf” will be shown only to teachers, not to students.</p>
+	 
+	 
+<!----------Reading Materials Divided into Segments -------------->
+	 <h3><strong>4.5 Reading Materials Divided into Segments </strong></h3>
+	<ul>
+	<li>Use Case: Each pdf will be divided into suitable no of segments</li>
+	<li>Actor(s): The System</li>
+	<li>Brief Description: To identify which questions belongs to which part of the reading materials and give an overview to teacher about the students’ current position.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>The system will generate a percentage over the segments right answered questions</td>
+		  <td>The system will generate a histogram of a cohort over the percentage.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-5: The teacher will inform the system which question is made from which segment.</p>
+	 
+	 
+<!-------------------Create Exam Portal-------------->
+	 <h3><strong>4.6 Create Exam Portal</strong></h3>
+	<ul>
+	<li>Use Case: Creating an exam portal</li>
+	<li>Actor(s): Teacher</li>
+	<li>Brief Description: After login as a teacher, he can create an exam portal for a cohort by clicking on 
+	  “create-exam-portal” button.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>Teacher clicks on “create-exam-portal” button.</td>
+		  <td>The system will provide a form to create it.</td>
+	   </tr>
+	   <tr>
+	      <td>Teacher fills up the necessary information and clicks submit button.</td>
+		  <td>System will show a successful message and add an exam-portal for that student-cohort.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-6: The system will show an error message if the form is not filled properly or if any 
+	  information is missing it shows the message “the filled is required”.</p>
+	 
+	 
+<!------------Add 3 types of Questions in Exam-portal---------->
+	 <h3><strong>4.7 Add 3 types of Questions in Exam-portal</strong></h3>
+	<ul>
+	<li>Use Case: Add MCQ, text answered questions, voice answered questions.</li>
+	<li>Actor(s): Teacher</li>
+	<li>Brief Description: Teacher will make some questions of these three types in a student-cohort and specify 
+	    the correct answer and also time duration of the exam.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>Teacher will get some options to choose and click on “Add-MCQ”, “Add-text-Ques”, “Add-voice-Ques”.</td>
+		  <td>They system will let the teacher to create an form in mixed of 3 types patterns of Questions</td>
+	   </tr>
+	   <tr>
+	      <td>Teacher will specify the answers.</td>
+		  <td>Students cannot see the answers and marks the got but teacher can.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-7: If teacher selects two options as correct answers of MCQ then an error message will pop up and the MCQ will not be formed.
+         <br>Section-8: For voice answered question teacher will set some key words only to detect it as write answers same for text answered questions too.
+     </p>
+	 
+	 
+<!-------------Take participation in the exam--------->
+	 <h3><strong>4.8 Take participation in the exam</strong></h3>
+	<ul>
+	<li>Use Case: Participating in exam</li>
+	<li>Actor(s): Students</li>
+	<li>Brief Description: The students of a student-portal can participate in exam after finishing the reading materials.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>This use case starts when a student clicks on “Start-Exam”</td>
+		  <td>The system will redirect the student to the exam window.</td>
+	   </tr>
+	   <tr>
+	      <td>The students will click on one of the option of MCQ</td>
+		  <td>After clicking the submit button, system will save all the answers</td>
+	   </tr>
+	   <tr>
+	      <td>The students will enter in text-Questions and answers the questions writing some text</td>
+		  <td>The system will save the answers after clicking on submit button.</td>
+	   </tr>
+	   <tr>
+	      <td>The students will enter in voice-Qustions page and turn on mike to answer the questions.</td>
+		  <td>The system will detect the voice and save the answers.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-9: Answers cannot be edited after clicking the submit button.
+         <br>Section-10: Students cannot turn of video while giving the exam otherwise the exam will be disqualified.
+     </p>
+	 
+	 
+<!---------4.9 Face Recognition on Video------>
+	 <h3><strong>4.9 Face Recognition on Video</strong></h3>
+	<ul>
+	<li>Use Case: Camera on</li>
+	<li>Actor(s): Students</li>
+	<li>Brief Description: Student will have to turn on the camera while logging or reading or giving exams.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>The use case starts when student clicks on “Log In”, “Log Out”, “Strat-Exam” button.</td>
+		  <td>System will ask to turn on camera.</td>
+	   </tr>
+	   <tr>
+	      <td>To open reading materials</td>
+		  <td>System will ask to turn on the camera.</td>
+	   </tr>
+	 </table>
+	 
+	 <h4><strong>Alternative course of events</strong></h4>
+	 <p>Section-11: If video turned off, it will show an error message to turn on the video.</p>
+      
+	 
+<!--------------Log Out--------->
+	 <h3><strong>4.10 Log Out</strong></h3>
+	<ul>
+	<li>Use Case: Log out</li>
+	<li>Actor(s): Student, Teacher</li>
+	<li>Brief Description: The users can log out from the system by clicking on “Log Out” button.</li>
+	<li>Type: Primary</li>
+	</ul>
+	
+	 <h4><strong>Typical course of events</strong></h4>
+	 <table width="1000px" border="1px">
+	   <tr>
+	      <th>Actor Action</th>
+		  <th>System Response</th>
+	   </tr>
+	   <tr>
+	      <td>Student or Teacher clicks the “Log Out” button.</td>
+		  <td>The system will redirect to the login page.</td>
+	   </tr>
+	 </table>
+	 
+	 
+	 </div>
+	</div>
+	</div>
+	</section>
+	
+	
+	<!-------------5 Other Nonfunctional Requirements------------>
+	<section id="function">
+	<div class="container">
+    <div class="row">
+	<div class="col-md-10">
+	<h3><strong>5 Other Nonfunctional Requirements <br> 5.1 Performance Requirements</strong></h3>
+	<ul>
+	<li>Android app and web app will be using the same backend which ensures good performance and synchronization.</li>
+	<li>The system is well optimized.</li>
+	<li>The system is available 24 by 7</li>
+	</ul>
+	
+	<h3><strong>5.2	Safety Requirements</strong></h3>
+	<ul>
+	<li>Errors will be minimized and an appropriate error message that guides the user from an error to fix the error will be provided.</li>
+	<li>Validation and authentication of user input is highly essential.</li>
+	</ul>
+	
+	<h3><strong>5.3	Security Requirements</strong></h3>
+	<ul>
+	<li>The system ensures a high level of security and integrity of the data.</li>
+	<li>Only authorized personnel can have access to the private data and only the user with a valid google account is allowed to log in and view its user page.</li>
+	</ul>
+	
+	<h3><strong>5.4	Software Quality Attributes</strong></h3>
+	<ul>
+	<li>The key software quality attributes are availability, reliability and usability.</li>
+	<li>Since the system is expected to be working 24/7, high availability and is important.</li>
+	<li>A quality and understandable user interface need to be developed.</li>
+	<li>The error messages have to be descriptive and can easily be understandable.</li>
+	</ul>
+	
+	<h3><strong>5.5	Business Rules</strong></h3>
+	<ul>
+	<li>System should be available for all of its users.</li>
+	<li>All the users shall access the system using a valid google account.</li>
+	</ul>
+	
+	</div>
+	</div>
+	</div>
+	</section>
+	
+	<!-------------Appendix A: Glossary------------>
+	<section id="appendix">
+	<div class="container">
+    <div class="row">
+	<div class="col-md-10">
+	<h3><strong>Appendix A: Glossary</strong></h3>
+	<p><h5><strong>API:</strong><h5>
+	  It stands for Application Protocol Interface. An API is basically a software 
+	  intermediate that allows two applications to interact with each other.
+	</p>
+	
+	<p><h5><strong>Framework:</strong><h5>
+	A software framework is an abstraction in which software, providing generic functionality, 
+	can be selectively changed by additional user-written code, thus providing application-specific software.
+	</p>
+	
+	<p><h5><strong>Library:</strong><h5>
+	   A library is a collection of non-volatile resources used by computer programs, often for software development.
+	</p>
+	
+	<p><h5><strong>Android:</strong><h5>
+	 Android is a mobile operating system based on a modified version of the linux kernel and other open source software, designed primarily for touchscreen mobile devices.
+	</p>
+	
+	<p><h5><strong>Database:</strong><h5>
+	  A database is an organized collection of structured information, or data, typically stored electronically in a computer system.
+	</p>
+	
+	</div>
+	</div>
+	</div>
+	</section> 
+	
+	
+	
+	
+	<!---connecting smooth scroll for menu bar------>
+	<script src="smooth-scroll-js"></script>
+	<script>
+	   var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+
+</body>
+
+</html>
